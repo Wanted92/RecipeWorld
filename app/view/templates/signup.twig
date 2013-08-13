@@ -1,0 +1,30 @@
+{% extends 'base.twig'%}
+
+{% block subtitle %}- Sign Up{% endblock %}
+
+{% block content %}
+
+<form action="{{ app.urlFor("SignupAddPost") }}" method="post" >
+
+	<label for="name"> Name: </label>
+	<input type="text" name="name_signup" id="name" maxlength="20"/></br></br>
+	
+	<label for="surname"> Surname: </label>
+	<input type="text" name="name_signup" id="surname" maxlength="20"/></br></br>
+	
+	<label for="username"> Username: </label>
+	<input type="text" name="user_signup" id="username" /> </br></br>
+	
+	<label for="email"> Email: </label>
+	<input type="email" name="email" id="email" /> </br></br>
+	
+	<label for="password"> Password: </label>
+	<input type="password" name="pass" id="pass" /> </br></br>
+	
+	<label for="bornDate"> Born date: </label>
+	<input type="text" name="date" id="date" /> </br></br>
+	
+	<input type="submit" name="submit_signup" value="Sign up">
+	
+</form>
+{% endblock %}

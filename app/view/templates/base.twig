@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script type="text/javascript" src="./js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="./js/prova.js"></script>
+		<title>Recipe World</title>
+	<link rel="stylesheet" href="./app/view/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+	<link rel="stylesheet" href="./app/view/css/ui-lightness/jquery-ui-1.10.3.custom.min.css">
+	</head>
+<body>
+
+	<header>
+	ciao
+	</header>
+	
+	<nav>
+		{% include 'menu.twig' %}
+	</nav>
+	
+	<section>
+		{% block content %}
+		{% endblock %}
+	</section>
+	
+	<aside>
+	</aside>
+</body>
+</html>

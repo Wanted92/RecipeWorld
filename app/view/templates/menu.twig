@@ -1,0 +1,16 @@
+{# setto l'array di link per il menu #}
+
+{% 
+	set links = {
+		'Homepage': app.urlFor('Homepage'),
+		'Sign up' : app.urlFor('Sign up')
+	}
+	
+%}
+<ul id="menu">
+	{% for key, link in links %}
+	    <li><a href="{{ link }}">{{key}}</a></li>
+	{% endfor %}
+</ul>
+	
+<br style="clear:both" />
