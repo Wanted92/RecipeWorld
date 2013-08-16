@@ -23,7 +23,7 @@ class __TwigTemplate_6b212657ca69d39fd7062afb351b9542 extends Twig_Template
 \t<script type=\"text/javascript\" src=\"./js/jquery-1.9.1.js\"></script>
 \t<script type=\"text/javascript\" src=\"./js/jquery-ui-1.10.3.custom.js\"></script>
 \t<script type=\"text/javascript\" src=\"./js/jquery-ui-1.10.3.custom.min.js\"></script>
-\t<script type=\"text/javascript\" src=\"./js/prova.js\"></script>
+\t<script type=\"text/javascript\" src=\"./js/form.js\"></script>
 \t\t<title>Recipe World</title>
 \t<link rel=\"stylesheet\" href=\"./app/view/css/ui-lightness/jquery-ui-1.10.3.custom.css\">
 \t<link rel=\"stylesheet\" href=\"./app/view/css/ui-lightness/jquery-ui-1.10.3.custom.min.css\">

@@ -11,6 +11,7 @@ return array(
     'Slim\\Views' => array($vendorDir . '/slim/views'),
     'Slim\\Extras' => array($vendorDir . '/slim/extras'),
     'Slim' => array($vendorDir . '/slim/slim'),
+    'Respect\\Validation' => array($vendorDir . '/respect/validation/library'),
     'Httpful' => array($vendorDir . '/nategood/httpful/src'),
     'Doctrine\\MongoDB' => array($vendorDir . '/doctrine/mongodb/lib'),
     'Doctrine\\Common' => array($vendorDir . '/doctrine/common/lib'),
