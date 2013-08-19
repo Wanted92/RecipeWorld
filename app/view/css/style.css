@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+.validate{
+	border: 2px solid #00CC33;
+}
+
+.invalidate{
+	border: 2px solid #FF0000;
+}

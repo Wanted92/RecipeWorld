@@ -27,6 +27,7 @@ class __TwigTemplate_6b212657ca69d39fd7062afb351b9542 extends Twig_Template
 \t\t<title>Recipe World</title>
 \t<link rel=\"stylesheet\" href=\"./app/view/css/ui-lightness/jquery-ui-1.10.3.custom.css\">
 \t<link rel=\"stylesheet\" href=\"./app/view/css/ui-lightness/jquery-ui-1.10.3.custom.min.css\">
+\t<link rel=\"stylesheet\" href=\"./app/view/css/style.css\">
 \t</head>
 <body>
 
@@ -36,16 +37,16 @@ class __TwigTemplate_6b212657ca69d39fd7062afb351b9542 extends Twig_Template
 \t
 \t<nav>
 \t\t";
-        // line 19
-        $this->env->loadTemplate("menu.twig")->display($context);
         // line 20
+        $this->env->loadTemplate("menu.twig")->display($context);
+        // line 21
         echo "\t</nav>
 \t
 \t<section>
 \t\t";
-        // line 23
+        // line 24
         $this->displayBlock('content', $context, $blocks);
-        // line 25
+        // line 26
         echo "\t</section>
 \t
 \t<aside>
@@ -54,10 +55,10 @@ class __TwigTemplate_6b212657ca69d39fd7062afb351b9542 extends Twig_Template
 </html>";
     }
 
-    // line 23
+    // line 24
     public function block_content($context, array $blocks = array())
     {
-        // line 24
+        // line 25
         echo "\t\t";
     }
 
@@ -73,6 +74,6 @@ class __TwigTemplate_6b212657ca69d39fd7062afb351b9542 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  61 => 24,  58 => 23,  49 => 25,  47 => 23,  42 => 20,  40 => 19,  20 => 1,);
+        return array (  62 => 25,  59 => 24,  50 => 26,  48 => 24,  43 => 21,  41 => 20,  20 => 1,);
     }
 }

@@ -7,7 +7,13 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"name = " + $(this).val(),
 			success: function(response){
-				$("#feed_name").html(response);
+				$("#name").removeClass('invalidate');
+				if(response){
+					$("#name").addClass('validate');
+					$('#feed_name').html(response);
+				}else{
+					$("#name").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');
@@ -21,7 +27,12 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"surname = " + $(this).val(),
 			success: function(response){
-				$("#feed_surname").html(response);
+				$("#surname").removeClass('invalidate');
+				if(response == true){
+					$("#surname").addClass('validate');
+				}else{
+					$("#surname").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');
@@ -35,7 +46,12 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"username = " + $(this).val(),
 			success: function(response){
-				$("#feed_username").html(response);
+				$("#username").removeClass('invalidate');
+				if(response == true){
+					$("#username").addClass('validate');
+				}else{
+					$("#username").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');
@@ -49,7 +65,12 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"email = " + $(this).val(),
 			success: function(response){
-				$("#feed_email").html(response);
+				$("#email").removeClass('invalidate');
+				if(response == true){
+					$("#email").addClass('validate');
+				}else{
+					$("#email").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');
@@ -63,7 +84,12 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"password = " + $(this).val(),
 			success: function(response){
-				$("#feed_password").html(response);
+				$("#password").removeClass('invalidate');
+				if(response == true){
+					$("#password").addClass('validate');
+				}else{
+					$("#password").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');
@@ -77,7 +103,12 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"password_check = " + $(this).val(),
 			success: function(response){
-				$("#feed_password_check").html(response);
+				$("#password_check").removeClass('invalidate');
+				if(response == true){
+					$("#password_check").addClass('validate');
+				}else{
+					$("#password_check").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');
@@ -91,7 +122,12 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"born_date = " + $(this).val(),
 			success: function(response){
-				$("#feed_born_date").html(response);
+				$("#born_date").removeClass('invalidate');
+				if(response == true){
+					$("#born_date").addClass('validate');
+				}else{
+					$("#born_date").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');
@@ -105,7 +141,12 @@ $(document).ready(function(){
 			url: "/app/controller/validation/validator.php",
 			data:"country = " + $(this).val(),
 			success: function(response){
-				$("#feed_country").html(response);
+				$("#country").removeClass('invalidate');
+				if(response == true){
+					$("#country").addClass('validate');
+				}else{
+					$("#country").addClass('invalidate');
+				}
 			},
 			error : function(){
 				alert('Niente');

@@ -1,7 +1,6 @@
 <?php
 
 	require_once 'vendor/autoload.php';
-
 	// Instanzia con Twig
 	$app = new \Slim\Slim(array(
 			'view' => new \Slim\Views\Twig(),
