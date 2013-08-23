@@ -6,4 +6,9 @@
 
 .invalidate{
 	border: 2px solid #FF0000;
+	color: #FF0000;
+}
+/*Reference to every span id feed_*/
+[id^="feed_"]{
+	color: #FF0000;
 }
