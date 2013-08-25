@@ -61,9 +61,9 @@ class __TwigTemplate_be80d37303eb194e1afc35a0fd8c6639 extends Twig_Template
 \t<input type=\"password\" name=\"password\" id=\"password\" size=\"20\" maxlength=\"20\" onkeyup = \"validate(this.id)\"/>
 \t<span id=\"feed_password\"></span></br></br>
 \t
-\t<label for=\"password_check\"> Password: </label>
+\t<!--  <label for=\"password_check\"> Password: </label>
 \t<input type=\"password\" name=\"password_check\" id=\"password_check\" size=\"20\" maxlength=\"20\" onkeyup = \"validate(this.id)\"/>
-\t<span id=\"feed_password_check\"></span></br></br>
+\t<span id=\"feed_password_check\"></span></br></br> -->
 \t
 \t<label for=\"bornDate\"> Born date: </label>
 \t<input type=\"text\" name=\"date\" id=\"born_date\" onkeyup = \"validate(this.id)\"/>

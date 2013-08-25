@@ -13,9 +13,13 @@
 	$countryValidator = v::alpha()->notEmpty()->length(1,21);
 	$dateValidator = v::date();
 	
-	// Split of rules to be used
+	// Split of rules to be used, and call to MongoDB to prevent duplicate
 	if(isset($_POST)){
 		$keys = array_keys($_POST);
+		$conn = new Mongo ();
+		if ($conn) {
+			$db = $conn->RecipeWorld;
+			$utenti = $db->users;
 			switch($keys[0]){
 				case "name_":{
 							$check = $nameValidator->validate(trim($_POST['name_']));
@@ -29,12 +33,16 @@
 				}
 				case "username_":{
 							$check = $usernameValidator->validate(trim($_POST['username_']));
-							echo $check;
+							$cursor = $utenti->findOne(array("username" => trim($_POST['username_'])));
+							if($check && !$cursor)
+								echo ('1');
 							break;
 				}
 				case "email_":{
 							$check = $emailValidator->validate(trim($_POST['email_']));
-							echo $check;
+							$cursor = $utenti->findOne(array("email" => trim($_POST['email_'])));
+							if($check && !$cursor)
+								echo ('1');
 							break;
 				}
 				case "password_":{
@@ -56,3 +64,4 @@
 				default: break;
 			}
 	}
+}
