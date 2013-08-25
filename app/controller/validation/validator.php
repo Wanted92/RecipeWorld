@@ -6,11 +6,10 @@
 	use Respect\Validation\Validator as v;
 
 	//Validation rules
-	$nameValidator = v::alpha()->notEmpty()->length(1,21);
-	$surnameValidator = v::alpha()->notEmpty()->length(1,21);
-	$usernameValidator = v::alnum()->notEmpty()->length(1,21);
+	$nameValidator = v::notEmpty()->length(1,21);
+	$surnameValidator = v::notEmpty()->length(1,21);
+	$usernameValidator = v::notEmpty()->length(1,21);
 	$emailValidator = v::notEmpty()->email();
-	$domainValidator = v::domain();
 	$passwordValidator = v::alnum()->notEmpty()->length(8,21);
 	$countryValidator = v::alpha()->notEmpty()->length(1,21);
 	$dateValidator = v::date();
