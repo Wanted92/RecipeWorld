@@ -8,13 +8,6 @@
 			$value = utf8_decode ( $value );
 		} );
 		
-		// Controlli
-		foreach ( $user as $key => $value ) {
-			if (empty ( $value )) {
-				exit ( '{"errore": "campo ' . $key . ' non inserito"}' );
-			}
-		}
-		
 		// Aggiungo lo user al database
 		$conn = new Mongo ();
 		if ($conn) {

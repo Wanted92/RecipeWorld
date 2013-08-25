@@ -1,6 +1,7 @@
 <?php
 
 	require_once('../../../vendor/autoload.php');
+	require('../lib/smtp-validate-email.php');
 
 	use Respect\Validation\Validator as v;
 
@@ -9,7 +10,8 @@
 	$surnameValidator = v::alpha()->notEmpty()->length(1,21);
 	$usernameValidator = v::alnum()->notEmpty()->length(1,21);
 	$emailValidator = v::notEmpty()->email();
-	$passwordValidator = v::alnum()->notEmpty()->length(9,21);
+	$domainValidator = v::domain();
+	$passwordValidator = v::alnum()->notEmpty()->length(8,21);
 	$countryValidator = v::alpha()->notEmpty()->length(1,21);
 	$dateValidator = v::date();
 	
@@ -39,10 +41,15 @@
 							break;
 				}
 				case "email_":{
-							$check = $emailValidator->validate(trim($_POST['email_']));
-							$cursor = $utenti->findOne(array("email" => trim($_POST['email_'])));
-							if($check && !$cursor)
-								echo ('1');
+							$from = 'a-happy-camper@campspot.net'; // for SMTP FROM:<> command
+							$email = trim($_POST['email_']);
+							$validator = new SMTP_Validate_Email($email, $from);
+							$check = $emailValidator->validate($email);
+							$smtp_results = $validator->validate();
+							$cursor = $utenti->findOne(array("email" => $email));
+							if($smtp_results[$email] == true && $check && !$cursor){
+								echo ('1'); 
+							}
 							break;
 				}
 				case "password_":{
