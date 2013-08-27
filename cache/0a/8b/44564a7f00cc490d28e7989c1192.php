@@ -19,15 +19,15 @@ class __TwigTemplate_0a8b44564a7f00cc490d28e7989c1192 extends Twig_Template
         echo "
 ";
         // line 4
-        $context["links"] = array("Homepage" => $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "urlFor", array(0 => "Homepage"), "method"), "Sign up" => $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "urlFor", array(0 => "Sign up"), "method"));
-        // line 10
+        $context["links"] = array("Homepage" => $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "urlFor", array(0 => "Homepage"), "method"), "Sign up" => $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "urlFor", array(0 => "Sign up"), "method"), "Login" => $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "urlFor", array(0 => "Login"), "method"));
+        // line 11
         echo "<ul id=\"menu\">
 \t";
-        // line 11
+        // line 12
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["links"]) ? $context["links"] : null));
         foreach ($context['_seq'] as $context["key"] => $context["link"]) {
-            // line 12
+            // line 13
             echo "\t    <li><a href=\"";
             echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true);
             echo "\">";
@@ -38,7 +38,7 @@ class __TwigTemplate_0a8b44564a7f00cc490d28e7989c1192 extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['link'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 14
+        // line 15
         echo "</ul>
 \t
 <br style=\"clear:both\" />
@@ -57,6 +57,6 @@ class __TwigTemplate_0a8b44564a7f00cc490d28e7989c1192 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  42 => 14,  31 => 12,  27 => 11,  24 => 10,  22 => 4,  19 => 2,  57 => 20,  54 => 19,  45 => 21,  43 => 19,  38 => 16,  36 => 15,  20 => 1,);
+        return array (  42 => 15,  31 => 13,  27 => 12,  24 => 11,  22 => 4,  19 => 2,  62 => 25,  59 => 24,  50 => 26,  48 => 24,  43 => 21,  41 => 20,  20 => 1,);
     }
 }

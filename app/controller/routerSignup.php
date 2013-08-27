@@ -13,7 +13,7 @@ $app->get ( '/signup', function () use($app) {
  * Questo route reindirizza al messaggio di avvenuta registrazione
  */
 $app->get ( '/signup/add', function () use($app) {
-	$app->render ( '', array (
+	$app->render ( 'emailConfirm.twig', array (
 			'app' => $app 
 	) );
 } )->name ( "SignupAdd" );
@@ -40,12 +40,6 @@ $app->post ( '/signup/add', function () use($app) {
 	$body = $response->body;
 	$feed = json_decode ( $body );
 	
-	/*if (property_exists ($feed, "errore" )) {
-		$app->render ( 'errore.twig', array (
-				'app' => $app,
-				'errore' => $feed->errore 
-		) );
-	} else if (property_exists ( $feed, "successo" )) {
-		$app->redirect ( $app->urlFor ( "Clienti" ) );
-	}*/
+	//reindirizzo al messaggio di invio email
+	$app->redirect($app->urlFor("SignupAdd"));
 } )->name ( "SignupAddPost" );

@@ -4,10 +4,6 @@
 		$json = $app->request ()->getBody ();
 		$user = json_decode ( $json );
 		
-		array_walk_recursive ( $user, function (&$value) {
-			$value = utf8_decode ( $value );
-		} );
-		
 		// Aggiungo lo user al database
 		$conn = new Mongo ();
 		if ($conn) {
@@ -22,5 +18,4 @@
 			
 			exit ( '{"successo": "true"}' );
 		}
-		
 	} )->name ("UserAdd");
